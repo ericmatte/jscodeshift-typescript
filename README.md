@@ -1,47 +1,30 @@
-# jscodeshift-typescript-example
+# jscodeshift helper scripts
+
+This repo contains some helpful migration script made with [jscodeshift](https://github.com/facebook/jscodeshift).
+
+## Available transformers
+
+### [Convert default props](./scripts/convert-default-props.ts)
+
+An alternative of [react-default-props](https://github.com/airbnb/ts-migrate/blob/master/packages/ts-migrate-plugins/src/plugins/react-default-props.ts) from [ts-migrate](https://github.com/airbnb/ts-migrate); which takes default props from a const variable and convert them into inlined optional parameters to the Component's function.
+
+Usage:
+
+```shell
+npx jscodeshift -t=scripts/convert-default-props.ts --parser=tsx './**/*.tsx'
+```
 
 ## TypeScript all the way 🚀
 
-Example usage of [jscodeshift](https://github.com/facebook/jscodeshift) _for_ TypeScript _with_ TypeScript:
-
-- TypeScript target files *.ts
-- TypeScript transformer
-- TypeScript test files
-- TypeScript fixtures
-
-## TypeScript transformer
-
-Strongly typed code and code completion with `@types/jscodeshift`
-
-![code-completion](https://raw.githubusercontent.com/chimurai/jscodeshift-typescript-example/main/docs/code-completion.gif)
+Example usage of [jscodeshift](https://github.com/facebook/jscodeshift) can be found [here](https://github.com/chimurai/jscodeshift-typescript-example).
 
 ## Installation
-
-```shell
-npm i
-```
-
-or
 
 ```shell
 yarn
 ```
 
-## Run codemod
-
-```shell
-npx jscodeshift -t ./examples/simple-rename.ts --extensions=ts --parser=ts './**/*.ts' --print --dry
-```
-
-> _Omit `--dry` to write the transformed source back to disk._
-
 ## Test
-
-```shell
-npm test
-```
-
-or
 
 ```shell
 yarn test
@@ -52,10 +35,6 @@ yarn test
 Use the [pre-configured VSCode launcher](https://github.com/chimurai/jscodeshift-typescript-example/blob/main/.vscode/launch.json) to run tests and debug your transformer.
 
 ![debugger](https://raw.githubusercontent.com/chimurai/jscodeshift-typescript-example/main/docs/debugger.gif)
-
-## Behind the scenes
-
-Use `@babel/parser` in [https://astexplorer.net](https://astexplorer.net) when working with the jscodeshift's [default parser](https://github.com/facebook/jscodeshift#usage-cli) (default: `babel`).
 
 ## Resources & Inspiration
 
