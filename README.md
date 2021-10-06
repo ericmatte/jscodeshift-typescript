@@ -11,7 +11,7 @@ An alternative of [react-default-props](https://github.com/airbnb/ts-migrate/blo
 Usage:
 
 ```shell
-npx jscodeshift -t=scripts/convert-default-props.ts --parser=tsx './**/*.tsx'
+npx jscodeshift -t=path/to/scripts/convert-default-props.ts --parser=tsx ./**/*.tsx
 ```
 
 ## TypeScript all the way 🚀
