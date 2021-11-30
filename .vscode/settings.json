@@ -3,5 +3,9 @@
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": true
+  },
+  "files.associations": {
+    "**/__testfixtures__/**/*.tsx": "plaintext",
+    "**/__testfixtures__/**/*.ts": "plaintext"
   }
 }
